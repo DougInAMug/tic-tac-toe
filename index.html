@@ -11,8 +11,14 @@
       Tic Tac Toe Time
     </h1>
     <div class="flex gap-10 mt-10">
-      <p id="player1" class="font-bold">Player x: 0</p>
-      <p id="player2" class="font-bold">Player o: 0</p>
+      <div id="player1" class="flex font-bold p-2 gap-1 bg-slate-300 rounded-md items-center">
+        <p>Player x<p>
+        <div id="player1Score" class="bg-slate-100 px-1 rounded-md">0</div>
+      </div>
+      <div id="player2" class="flex font-bold p-2 gap-1 bg-slate-300 rounded-md items-center">
+        <p>Player o<p>
+        <div id="player2Score" class="bg-slate-100 px-1 rounded-md">0</div>
+      </div>
     </div>
     <button id="resetButton" class="mt-10 rounded-full px-3 py-1 font-bold bg-red-300">Reset</button>
     </body>

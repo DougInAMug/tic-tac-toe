@@ -80,11 +80,13 @@ function checkForWin(): boolean {
         if (players[currentPlayer].cells.includes(winCell1) === true &&
             players[currentPlayer].cells.includes(winCell2) === true &&
             players[currentPlayer].cells.includes(winCell3) === true) {
+            const audio = new Audio('https://upload.wikimedia.org/wikipedia/commons/5/50/En-uk-congratulations.ogg');
+            audio.play();
             document.getElementById(winCell1)?.classList.add("bg-red-300");
             document.getElementById(winCell2)?.classList.add("bg-red-300");
             document.getElementById(winCell3)?.classList.add("bg-red-300");
             players[currentPlayer].score += 1;
-            document.getElementById(`player${currentPlayer + 1}`)!.innerHTML = `Player ${players[currentPlayer].symbol}: ${players[currentPlayer].score}`
+            document.getElementById(`player${currentPlayer + 1}Score`)!.innerHTML = `${players[currentPlayer].score}`
             currentlyPlaying = false;
             return true;
         };
